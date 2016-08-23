@@ -149,7 +149,7 @@ NTP安装完成后，编辑\/etc\/ntp.conf配置文件
 
 修改配置文件ntp.conf，其中server部分定义了向更高一级NTP服务器同步时间，这边使用的为 2.cn.pool.ntp.org ，1.asia.pool.ntp.org ， 2.asia.pool.ntp.org ，可自行修改为最合适的NTP服务器。并且通过restrict关键字，允许某个子网网段进行时间同步（这里使用的ntp服务器ip地址为192.168.0.9，并且允许192.168.0.0\/24 网段与该服务器同步时间，请根据实际情况自行修改），一个典型的配置文件配置如下：
 
-```bash
+```
 # For more information about this file, see the man pages 
 # ntp.conf(5), ntp_acc(5), ntp_auth(5), ntp_clock(5), ntp_misc(5), ntp_mon(5).  
 
@@ -162,7 +162,8 @@ restrict default nomodify notrap nopeer noquery
 # Permit all access over the loopback interface. This could
 # be tightened as well, but to do so would effect some of
 # the administrative functions.
-restrict 127.0.0.1 restrict ::1
+restrict 127.0.0.1
+restrict ::1
 
 # Hosts on local network are less restricted.
 restrict 192.168.0.0 mask 255.255.255.0 nomodify notrap
@@ -220,6 +221,10 @@ disable monitor
 方式一：
 
 修改配置文件ntp.conf，将时间同步服务器指向192.168.0.9，一个典型的配置文件如下：
+
+```
+
+```
 
 
 
