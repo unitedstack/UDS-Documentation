@@ -15,13 +15,13 @@ UDS Ceph Azeroth发布版本支持操作系统：CentOS 6.x， CentOS 7.x ——
 为系统盘进行分区
 
 | **Boot分区** | **1024M** |
-| :--- | :--- |
+| --- | --- |
 | Swap分区 | 4096M |
 
 剩余空间划分为LVM，PV名称： ustack\_pv
 
 | **分区** | **名称** | **大小** |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | \/ | rootvol | 20G |
 | \/home | homevol | 5G |
 | \/var | varvol | 剩余所有空间 |
@@ -222,7 +222,6 @@ disable monitor
 
 修改配置文件ntp.conf，将时间同步服务器指向192.168.0.9，一个典型的配置文件如下：
 
-
 ```
 # For more information about this file, see the man pages 
 # ntp.conf(5), ntp_acc(5), ntp_auth(5), ntp_clock(5), ntp_misc(5), ntp_mon(5).  
@@ -241,7 +240,6 @@ restrict ::1
 
 # Hosts on local network are less restricted.
 restrict 192.168.0.0 mask 255.255.255.0 nomodify notrap
-
 
 # Use public servers from the pool.ntp.org project.
 # Please consider joining the pool (http://www.pool.ntp.org/join.html).
@@ -274,3 +272,4 @@ keys /etc/ntp/keys
 # Note: Monitoring will not be disabled with the limited restriction flag.
 disable monitor
 ```
+
