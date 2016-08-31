@@ -216,7 +216,7 @@ removed item id -5 name 'ceph-05' from crush map
 # ceph osd crush reweight {name} {weight}
 ```
 
-例如，调整osd.3的权重，
+例如，调整osd.3的权重
 
 ```
 # ceph osd crush reweight osd.3 0.03
