@@ -132,10 +132,12 @@ ceph-deploy osd activate server-{68,69,70}:/dev/sd{b,c,d}1
 而如果指定了Journal，则activate的时候就可以必须将Journal分区也带上
 
 ```
-ceph-deploy osd activate server-{68,69,70}:/dev/sd{b,c,d}:/dev/sda{1,2,3}
+ceph-deploy osd activate server-{68,69,70}:/dev/sd{b,c,d}:/dev/sda
 ```
 
-注：\/dev\/sd{b,c,d}:\/dev\/sda{1,2,3}后面的卷为journal卷，即sda整块盘就用来做为日志盘。
+注：\/dev\/sda 为Journal盘，不需要对\/dev\/sda进行分区，Journal分区默认大小为5GB，若需要改变Journal分区大小，请在ceph.conf文件中加入osd\_journal\_size字段进行修改，如：Journal分区需要15G，可设置为osd\_journal\_size ＝ 15360
+执行命令时，需对远端配置文件进行覆盖，使其生效。
+ceph-deploy --overwrite-conf osd activate server-{68,69,70}:\/dev\/sd{b,c,d}:\/dev\/sda
 
 ### **2.2.6 创建CRUSH 层级**
 
