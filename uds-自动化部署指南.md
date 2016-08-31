@@ -2,8 +2,6 @@
 
 ## 3.1 部署规划
 
-
-
 在实际的部署过程中，需要选择一下部署方式，网络规划，和角色。不同的部署方式将导致不同的部署行为。网络规划对于后续的性能和稳定性也是有很大影响的。如果条件允许请使用两个万兆网卡。
 
 ### **3.1.1 部署方式**
@@ -14,7 +12,7 @@
 
 Ceph的网络分为public-nework，cluster-network，所以需要规划一下，如果成本允许，可以使用两块万兆。一块用来作为public-network，一块用来作为cluster-network。如果成本紧张，则可以使用一块万兆，这样public-network和cluster-network都使用同一块网卡。
 
+![](/assets/117ACDFC-26C1-4DB9-95F7-C2AAAC9A71ED.png)
 
-
-fdsg gsgs
+fds
 
