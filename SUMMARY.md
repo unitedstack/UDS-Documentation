@@ -21,4 +21,5 @@
             * [使用S3 API访问对象存储](使用s3-api访问对象存储.md)
             * [使用swiftclient 访问对象存储](使用swiftclient-访问对象存储.md)
             * [使用s3cmd访问对象存储](使用s3cmd访问对象存储.md)
+        * [块存储](块存储.md)
 
