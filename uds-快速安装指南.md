@@ -182,15 +182,13 @@ ceph osd crush add osd.5 0.42 osd-domain=osd-group-0-rack-01 replica-domain=repl
 
 当然这里的前提是CRUSH里已经有rack这个类型，如果没有，就需要手动添加这个类型（getcrushmap后，使用vim编辑CRUSHMap，最后setcrushmap）。通常情况下，用户不需要额外设置，UDS Ceph 提供默认的类型已经足够覆盖绝大多数的使用场景，从上至下分别为：root, region, datacenter, room, pod, pdu, row, rack, chassis, host, osd。
 
-UDS Ceph没有使用官方默认的层级，而是在其物理层级之上，建立了逻辑层级，来增强Ceph的可用性与可靠性。具体请参见[launchcrush](https://confluence.ustack.com/download/attachments/16113054/launchcrush.py?version=1&modificationDate=1466579893441&api=v2)，里面写的很详细。这里就不做过多的介绍了。
+UDS Ceph没有使用官方默认的层级，而是在其物理层级之上，建立了逻辑层级，来增强Ceph的可用性与可靠性。
 
 ### **2.2.7 CHECK CRUSH层级**
 
 在CRUSH层级建立好之后，通过ceph osd tree 验证CRUSH是否创建成功，并且是符合预期的，如下
 
 ![](/assets/DDF264E8-D34C-400F-A054-36AE23323E57.png)
-
-CRUSH配置指南，请参见：[5 CRUSH配置](https://confluence.ustack.com/pages/viewpage.action?pageId=16114110)
 
 ### **2.2.8 建立一个POOL**
 
