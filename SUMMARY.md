@@ -1,7 +1,6 @@
 # Summary
 
-* [ReadMe](README.md)
-* [UDS 产品简介](uds-产品简介.md)
+* [UDS 产品简介](README.md)
 * [Azeroth 版本发布说明](Azeroth版本发布说明.md)
 * [UDS 安装部署](uds-安装部署.md)
     * [UDS 基础环境配置指南](uds-基础环境配置指南.md)
